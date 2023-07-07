@@ -1,0 +1,137 @@
+.footer {
+    background-color: @text-blue-4;
+    padding-right: 96px;
+    color: #fff;
+    margin-top: -1px;
+
+    .footer-wrapper {
+        padding-bottom: 90px;
+        padding-left: 96px;
+        background-color: @text-blue-2;
+
+        @media (max-width: 820px) {
+            padding-left: 0;
+        }
+    }
+
+    .footer__contacts {
+        margin-right: 90px;
+
+        & ~ .footer__block {
+            margin-right: 70px;
+        }
+    }    
+
+    .footer-container {
+        display: flex;
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 820px) {
+        .footer-container {
+            flex-wrap: wrap;
+
+            .footer__contacts {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 560px) {
+        .footer__block {
+            margin-bottom: 50px;
+
+            &:last-of-type { margin-bottom: 0; }
+        }
+    }
+
+    .footer__logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .logo__text {
+            margin-left: 15px;
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 0.56px;
+        }
+    }
+
+    .footer__contacts__list {
+        padding: 0;
+        list-style-type: none;
+
+        & li {
+            line-height: 26px;
+            letter-spacing: 0.8px;
+            margin-bottom: 24px;
+            padding-left: 2rem;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+            }
+        }
+
+        & li:first-of-type {
+            max-width: 250px;
+
+            &::before {
+                content: 'A.';
+            }
+        }
+
+        & li:nth-child(2)::before {
+            content: 'T.';
+        }
+    
+        
+        & li:last-of-type {
+            margin-bottom: 0;
+
+            &::before {
+                content: 'E';
+            }
+        }
+    }
+
+    .footer__text {
+        opacity: 0.4;
+        letter-spacing: 0.8px;
+    }
+
+    .footer__block {
+        .block__header {
+            display: block;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+
+        .block__list {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+
+            li {
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: 0.8px;
+                margin-bottom: 1rem;
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1037px) {
+        padding-right: 0;
+    }
+}

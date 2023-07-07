@@ -1,0 +1,100 @@
+.partners {
+    background-color: @text-blue-4;
+    color: #fff;
+    border-radius: 200px 0px 0px 0px;
+    padding: 100px 0;
+
+    @media (max-width: 620px) {
+        border-radius: 120px 0px 0px 0px;
+    }
+
+    .partners__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+        .header__title {
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 46px;
+            letter-spacing: 1.8px;
+            margin: 0;
+        }
+
+        .header__description {
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.8px;
+            opacity: 0.6;
+            width: 100%;
+            max-width: 500px;
+            margin: 0;
+        }
+
+        @media (max-width: 1025px) {
+            flex-direction: column;
+            align-items: center;
+
+            .header__title {
+                margin-bottom: 40px;
+
+                br { display: none; }
+            }
+
+            .header__description {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .header__title {
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .partners__grid {
+        gap: 1px;
+        background-color: #ffffff5d;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+    
+        .grid__partner-card {
+            background-color: @text-blue-4;
+            box-sizing: border-box;
+            transition: all .2s;
+
+            &:hover {
+                background-color: darken(@text-blue-4, 4%);
+            }
+    
+            .partner-card__link {
+                display: grid;
+                place-items: center;
+                height: 128px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 46px;
+                letter-spacing: 0.4px;
+
+                &:hover {
+                    background-color: lighten(@text-blue-4, 4%);
+                }
+            }
+    
+            &.more {
+                background-color: darken(@text-blue-4, 5%);
+            }
+        }
+
+        @media (max-width: 867px) {
+            .grid__partner-card:nth-child(7),
+            .grid__partner-card:nth-child(8) {
+                display: none;
+            }
+        }
+    }
+}
+
